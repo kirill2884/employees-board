@@ -1,7 +1,7 @@
 import { CSSProperties, useState } from "react";
 import ModalWindow from "../common/ModalWindow";
 import { Employee } from "../types/Employee"
-import { Box, Typography } from "@mui/material";
+import { Box, SxProps, Theme, Typography } from "@mui/material";
 import EmployeeDetail from "./EmployeeDetail";
 import SmartphoneIcon from '@mui/icons-material/Smartphone';
 import MailIcon from '@mui/icons-material/Mail';
@@ -13,7 +13,7 @@ type Props = {
 
 const EmployeeCart:React.FC<Props> = ({employee}) => {
 
-    const style:CSSProperties = {
+    const style:SxProps<Theme> = {
             display: "flex",
             flexDirection: "column",
             padding: 2,

@@ -1,7 +1,7 @@
-import { CSSProperties } from "@mui/styled-engine";
+
 import { Employee } from "../types/Employee";
 import EmployeeCart from "./EmployeeCart";
-import { Box, Typography } from "@mui/material";
+import { Box, SxProps, Theme } from "@mui/material";
 
 type Props = {
    employees:Employee[]
@@ -9,9 +9,13 @@ type Props = {
 
 const EmployeeList:React.FC<Props> = (props) => {
 
-    const style:CSSProperties = {
+    const style: SxProps<Theme> = {
             display:"grid",
-            gridTemplateColumns:"repeat(3, 1fr)",
+            gridTemplateColumns:{
+                xs: "1fr",        
+                sm: "repeat(2, 1fr)", 
+                md: "repeat(3, 1fr)" 
+            },
             gap:2,
       };
 
